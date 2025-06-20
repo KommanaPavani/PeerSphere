@@ -4,9 +4,9 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    
     max-width: 800px;
     margin-left: 50px;
+    position: relative; /* Allows positioning of child elements relative to this container */
 }
 
 h1, h2 {
@@ -29,17 +29,10 @@ h1, h2 {
     color: #555;
 }
 
-
-
-.video-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default: 4 videos per row */
-    gap: 30px 130px;
-    list-style-type: none;
-    padding: 0;
-}
-
-button {
+button[name='uploadbutton'] {
+    position: absolute; /* Position the button relative to the .profile-page container */
+    top: 20px; /* Distance from the top of the container */
+    right: 20px; /* Distance from the right of the container */
     padding: 8px 15px; /* Reduced padding */
     font-size: 14px;
     border: none;
@@ -47,12 +40,56 @@ button {
     cursor: pointer;
     background-color: #007bff;
     color: white;
-    width: auto; /* Adjust width */
     transition: background-color 0.3s ease;
-    margin-top: 20px; /* Add spacing from the content above */
-    align-self: center; /* Center the button horizontally */
 }
 
-button:hover {
+button[name='uploadbutton']:hover {
+    background-color: #0056b3;
+}
+
+button[name='back'] {
+    position: absolute;
+    top: 60px; /* Adjust this based on layout */
+    right: 20px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+    
+}
+
+button[name='back']:hover {
+    background-color: #0056b3;
+}
+.uploaded-videos-section {
+    margin-top: 20px;
+}
+
+.video-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.video-list li {
+    margin-bottom: 20px;
+}
+.profile-button {
+    position: absolute; /* Position the button relative to the .profile-page container */
+   
+    padding: 8px 15px; /* Reduced padding */
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
     background-color: #0056b3;
 }

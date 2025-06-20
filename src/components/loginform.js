@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import SignupForm from './signup';
-import './FormStyles.css';
+import './FormStyle.css';
 
 const LoginForm = () => {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -69,7 +69,7 @@ const LoginForm = () => {
         value={formData.password}
         onChange={handleChange}
       />
-      <button type="submit">Login</button>
+      <button name='login' type="submit">Login</button>
       <p>
         Don't have an account?{' '}
         <button

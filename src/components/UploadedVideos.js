@@ -35,25 +35,39 @@ const UploadedVideos = () => {
 
     return (
         <div className="uploaded-videos-page">
-            <h1>Uploaded Videos</h1>
+            <h1>Your Uploaded Courses</h1>
             {userVideos.length > 0 ? (
                 <ul className="video-list">
                     {userVideos.map((video) => (
                         <li key={video._id}>
                             <p><strong>Name:</strong> {video.name}</p>
                             <p><strong>Description:</strong> {video.description}</p>
-                            <video
-                                src={`http://localhost:5000/${video.videoPath}`}
-                                controls
+
+                            {/* Show image */}
+                            <img
+                                src={`http://localhost:5000/${video.imagePath}`}
+                                alt={video.name}
                                 width="300"
-                            ></video>
+                                style={{ marginBottom: "10px" }}
+                            />
+
+                            {/* Show video if available */}
+                            {video.videoPath ? (
+                                <video
+                                    src={`http://localhost:5000/${video.videoPath}`}
+                                    controls
+                                    width="300"
+                                />
+                            ) : (
+                                <p style={{ color: "gray" }}><em>Video not uploaded</em></p>
+                            )}
                         </li>
                     ))}
                 </ul>
             ) : (
                 <p>No videos uploaded yet.</p>
             )}
-            <button onClick={() => navigate("/profile")}>Back to Profile</button>
+            <button name="backp" onClick={() => navigate("/profile")}>Back to Profile</button>
         </div>
     );
 };

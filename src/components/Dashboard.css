@@ -1,164 +1,124 @@
-/* Dashboard Styles */
-.dashboard {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row; /* Sidebar on the left, content on the right */
-}
-
-/* Sidebar for buttons (Upload, Profile, Browse) */
-.sidebar {
-    background-color: #121212;
-    color: white;
-    width: 200px; /* Fixed width for the sidebar */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 15px;
-    padding-top: 200px; /* Moves buttons down */
-}
-
-.sidebar button {
-    width: 100%; /* Make buttons full width */
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    text-align: left; /* Align text to the left */
-    transition: background-color 0.3s ease;
-}
-
-.sidebar button:hover {
-    background-color: #0056b3;
-}
-
-/* Main content area */
-.main-content {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-/* Top section for logout button */
+/* Fixed Logout Button at Top-Right */
 .dashboard-header {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
 }
 
 .dashboard-header button {
-    padding: 8px 12px; /* Reduced padding */
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #ff4d4d;
-    color: white;
-    transition: background-color 0.3s ease;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .dashboard-header button:hover {
-    background-color: #cc0000;
+  background-color: #c0392b;
 }
 
-/* Upload Form Styles */
+/* Other layout styles remain the same */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+
+.sidebar button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #34495e;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+
+
+}
+.upload-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* Move slightly to left and top */
+
+}
+
+
 .upload-form-container {
-    margin-top: 50px; /* Add some spacing from the top of the main content */
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Center the form */
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  max-width: 600px;
+  
+  padding: 30px 40px;
+  border-radius: 12px;
+ margin-top: -60px; /* Adjust upward */
+  margin-left: -40px; /* Shift to the left */
+  text-align: center;
 }
 
 .upload-form-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333333;
-    text-align: center;
+
+  font-size: 26px;
+  color: #2c3e50;
 }
 
-.upload-form-container label {
-    display: block;
-    font-size: 16px;
-    color: #333333;
-    margin-bottom: 8px;
-}
-
-.upload-form-container input,
+.upload-form-container input[type="text"],
 .upload-form-container textarea,
-.upload-form-container button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.upload-form-container input:focus,
-.upload-form-container textarea:focus {
-    border-color: #007bff;
+.upload-form-container input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+   margin-bottom: 12px; /* was 20px */
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .upload-form-container textarea {
-    resize: none; /* Disable resizing of textarea */
-    height: 100px;
+  resize: vertical;
+  min-height: 100px;
 }
 
-.upload-form-container button {
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
+.upload-form-container button[type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.upload-form-container button:hover {
-    background-color: #0056b3;
-}
-/* Profile Container */
-
-
-/* Video List */
-.video-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default: 4 videos per row */
-    gap: 30px 130px;
-    list-style-type: none;
-    padding: 0;
+.upload-form-container button[type="submit"]:hover {
+  background-color: #27ae60;
 }
 
-
-
-
-
-/* Close Profile Button */
-.profile-container button {
-    padding: 8px 15px; /* Reduced padding */
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    width: auto; /* Adjust width */
-    transition: background-color 0.3s ease;
-    margin-top: 20px; /* Add spacing from the content above */
-    align-self: center; /* Center the button horizontally */
-}
-
-.profile-container button:hover {
-    background-color: #0056b3;
+.no-image-text {
+  font-style: italic;
+  color: #888;
+  
 }

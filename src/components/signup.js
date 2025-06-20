@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import LoginForm from './loginform'; // Import LoginForm
-import './FormStyles.css';
+import './FormStyle.css';
 
 const SignupForm = () => {
   const [showLogin, setShowLogin] = useState(false); // State to toggle back to LoginForm
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');  // New state for success message
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,13 +28,17 @@ const SignupForm = () => {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setFormData({ username: '', email: '', password: '' });
-        setShowLogin(true)
+        setSuccess('Signup successful! Please log in.');
+        setShowLogin(true);  // Show LoginForm after success
       } else {
-        setError('Error during signup');
+        setError(data.error || 'Error during signup');
       }
     } catch (err) {
+      console.error(err);
       setError('Server error');
     }
   };
@@ -47,6 +52,7 @@ const SignupForm = () => {
     <form onSubmit={handleSubmit}>
       <h2>Signup</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      {success && <p style={{ color: 'green' }}>{success}</p>} {/* Display success message */}
       <input
         type="text"
         name="username"

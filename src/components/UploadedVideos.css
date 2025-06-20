@@ -1,13 +1,12 @@
-.uploaded-videos-page {
+ .uploaded-videos-page {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    
+     max-width: 800px;
+   margin-left: 50px;
 }
 
 h1 {
@@ -16,38 +15,35 @@ h1 {
 }
 
 .video-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 4 videos per row */
+     gap: 30px 130px;
     list-style-type: none;
     padding: 0;
 }
 
-.video-list li {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-video {
-    display: block;
-    margin: 10px auto;
-    border-radius: 8px;
-    max-width: 100%;
-}
-
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+button[name='backp']{
+    position: absolute; /* Position the button relative to the .profile-page container */
+     top: 20px; /* Distance from the top of the container */
+     right: 20px; /*Distance from the right of the container */
+    padding: 8px 15px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-}
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease; 
+ }
 
-button:hover {
+
+button[name='backp']:hover {
     background-color: #0056b3;
-}
+}  
+.uploaded-videos-page {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  
+  
