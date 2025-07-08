@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# PeerSphere 🎓💻
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PeerSphere is a collaborative web platform that allows students to upload, browse, and share knowledge on tech stacks and academic topics. It’s designed to promote peer learning by simplifying the sharing of course content like images, descriptions, and videos.
 
-## Available Scripts
+## 🌐 Live Preview
 
-In the project directory, you can run:
+> *Coming Soon* (You can deploy using platforms like Vercel, Netlify, or Render)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React.js, HTML, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **Development Tools:** VS Code, Postman
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📸 Features
 
-### `npm run build`
+### 🗂️ Browse Courses
+Users can:
+- Explore all uploaded courses with titles, images, and descriptions.
+- Visually navigate the available knowledge content.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screenshot 2025-07-08 183958](https://github.com/user-attachments/assets/53dbb1b4-cb3c-4444-b9c2-87d95350b1b4)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📤 Upload Courses
+Users can:
+- Upload a course image.
+- Add a course title and description.
+- Optionally upload a video file related to the course.
+- Get real-time feedback (e.g., "Course uploaded successfully!").
+  ![Screenshot 2025-07-08 183854](https://github.com/user-attachments/assets/a25d987a-2eae-4a0a-b380-7a0b40028e29)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 👤 User Sidebar Navigation
+- Upload
+- Browse
+- Profile
+  ![Screenshot 2025-07-08 183930](https://github.com/user-attachments/assets/3402c6e6-0883-4902-8988-bdf0579cece5)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
+- Node.js & npm
+- MongoDB Atlas cluster
+- VS Code or preferred IDE
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the repo**
+```bash
+git clone https://github.com/your-username/peersphere.git
+cd peersphere
