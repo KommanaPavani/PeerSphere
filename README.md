@@ -4,7 +4,7 @@ PeerSphere is a collaborative web platform that allows students to upload, brows
 
 ## 🌐 Live Preview
 
-> *Coming Soon* (You can deploy using platforms like Vercel, Netlify, or Render)
+> *Coming Soon* 
 
 ---
 
@@ -23,6 +23,7 @@ PeerSphere is a collaborative web platform that allows students to upload, brows
 Users can:
 - Explore all uploaded courses with titles, images, and descriptions.
 - Visually navigate the available knowledge content.
+  
 
 ![Screenshot 2025-07-08 183958](https://github.com/user-attachments/assets/53dbb1b4-cb3c-4444-b9c2-87d95350b1b4)
 
@@ -33,6 +34,8 @@ Users can:
 - Add a course title and description.
 - Optionally upload a video file related to the course.
 - Get real-time feedback (e.g., "Course uploaded successfully!").
+
+  
   ![Screenshot 2025-07-08 183854](https://github.com/user-attachments/assets/a25d987a-2eae-4a0a-b380-7a0b40028e29)
 
 
@@ -42,6 +45,8 @@ Users can:
 - Upload
 - Browse
 - Profile
+
+  
   ![Screenshot 2025-07-08 183930](https://github.com/user-attachments/assets/3402c6e6-0883-4902-8988-bdf0579cece5)
 
 
